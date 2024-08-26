@@ -11,7 +11,7 @@ void Z_function(string& s,vector<int>& z){
         if(i<=r)
             z[i]=min(r-i+1,z[i-l]);
         while(s[i+z[i]]==s[z[i]])++z[i];
-        if(z[i]-i+1>r){
+        if(z[i]+i-1>r){
             l=i;
             r=i+z[i]-1;
         }
